@@ -1,7 +1,7 @@
 site_name: My Repo Docs
-site_url: https://<org>.github.io/<repo>/
-repo_url: https://github.com/<org>/<repo>
-repo_name: <org>/<repo>
+site_url: https://JollyKrampus.github.io/documentation-github-pages/
+repo_url: https://github.com/JollyKrampus/documentation-github-pages
+repo_name: JollyKrampus/documentation-github-pages
 
 theme:
   name: material
