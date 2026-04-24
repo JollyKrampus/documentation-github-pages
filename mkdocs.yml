@@ -1,7 +1,16 @@
-site_name: My Repo Docs
+site_name: Correspondence System Docs
 site_url: https://JollyKrampus.github.io/documentation-github-pages/
 repo_url: https://github.com/JollyKrampus/documentation-github-pages
 repo_name: JollyKrampus/documentation-github-pages
+
+# Scan the entire repo root — any .md file anywhere is a doc page
+docs_dir: .
+
+exclude_docs: |
+  site/
+  .git/
+  .github/
+  node_modules/
 
 theme:
   name: material
@@ -24,22 +33,17 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
-nav:
-  - Home: index.md
-  - ADRs:
-    - Overview: adrs/index.md
-    - "0001 - Example Decision": adrs/0001-example-decision.md
-  - Features:
-    - Overview: features/index.md
-    - Example Feature: features/example-feature.md
-
 plugins:
   - search
 
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
