@@ -1,0 +1,52 @@
+site_name: My Repo Docs
+site_url: https://<org>.github.io/<repo>/
+repo_url: https://github.com/<org>/<repo>
+repo_name: <org>/<repo>
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - ADRs:
+    - Overview: adrs/index.md
+    - "0001 - Example Decision": adrs/0001-example-decision.md
+  - Features:
+    - Overview: features/index.md
+    - Example Feature: features/example-feature.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
