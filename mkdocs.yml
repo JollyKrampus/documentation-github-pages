@@ -3,14 +3,8 @@ site_url: https://JollyKrampus.github.io/documentation-github-pages/
 repo_url: https://github.com/JollyKrampus/documentation-github-pages
 repo_name: JollyKrampus/documentation-github-pages
 
-# Scan the entire repo root — any .md file anywhere is a doc page
-docs_dir: .
-
-exclude_docs: |
-  site/
-  .git/
-  .github/
-  node_modules/
+# docs_dir stays as 'docs' — the workflow collects .md files from
+# the entire repo into docs/ before building (see .github/workflows/docs.yml)
 
 theme:
   name: material

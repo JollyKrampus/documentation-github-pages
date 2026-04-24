@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "docs/**"
+      - "**/*.md"
       - "mkdocs.yml"
       - "requirements.txt"
       - ".github/workflows/docs.yml"
@@ -34,6 +34,21 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Collect .md files from entire repo into docs/
+        run: |
+          find . -name "*.md" \
+            ! -path "./docs/*" \
+            ! -path "./site/*" \
+            ! -path "./.git/*" \
+            ! -path "./.github/*" \
+            ! -path "./node_modules/*" \
+          | while read -r file; do
+              dest="docs/${file#./}"
+              mkdir -p "$(dirname "$dest")"
+              cp "$file" "$dest"
+              echo "  collected: $file → $dest"
+            done
 
       - name: Build site
         run: mkdocs build
