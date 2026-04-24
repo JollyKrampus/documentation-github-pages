@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://JollyKrampus.github.io/documentation-github-pages/</loc>
+         <lastmod>2026-04-24</lastmod>
+    </url>
+    <url>
+         <loc>https://JollyKrampus.github.io/documentation-github-pages/adrs/</loc>
+         <lastmod>2026-04-24</lastmod>
+    </url>
+    <url>
+         <loc>https://JollyKrampus.github.io/documentation-github-pages/adrs/0001-example-decision/</loc>
+         <lastmod>2026-04-24</lastmod>
+    </url>
+    <url>
+         <loc>https://JollyKrampus.github.io/documentation-github-pages/features/</loc>
+         <lastmod>2026-04-24</lastmod>
+    </url>
+    <url>
+         <loc>https://JollyKrampus.github.io/documentation-github-pages/features/example-feature/</loc>
+         <lastmod>2026-04-24</lastmod>
+    </url>
+</urlset>
